@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Small Day Project</title>
+<style>
+:root{--ink:#202124;--muted:#666b73;--line:#d9ddd6;--paper:#fbfaf6;--leaf:#4d7c59;--clay:#b35f42;--sky:#dcebf1;--sun:#f5c86a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"Noto Sans KR",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:0 28px}
+header{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.02em}.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--leaf);color:#fff;font-size:15px}nav{display:flex;gap:26px;font-size:14px;color:var(--muted)}
+main{padding:74px 0 60px}.hero{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}.eyebrow{margin:0 0 18px;color:var(--clay);font-size:13px;font-weight:700;letter-spacing:.08em}.hero h1{margin:0;max-width:520px;font-size:clamp(40px,5vw,68px);line-height:1.1;letter-spacing:-.04em}.lead{max-width:470px;margin:24px 0 30px;color:var(--muted);font-size:17px}.actions{display:flex;gap:12px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:1px solid var(--ink);border-radius:4px;font-size:14px;font-weight:700}.button.primary{background:var(--ink);color:#fff}.button.secondary{border-color:var(--line);color:var(--muted);background:#fff}
+.scene{position:relative;min-height:430px;padding:28px;background:var(--sky);overflow:hidden}.sun{position:absolute;top:32px;right:34px;width:76px;height:76px;border-radius:50%;background:var(--sun)}.desk{position:absolute;right:0;bottom:0;left:0;height:74px;background:#c9956e}.notebook{position:absolute;top:92px;left:40px;right:40px;padding:28px 30px;background:#fff;border:1px solid #e2e1da;box-shadow:12px 14px 0 rgba(32,33,36,.08);transform:rotate(-2deg)}.note-title{margin:0 0 22px;font-size:22px}.task{display:flex;align-items:center;gap:12px;padding:13px 0;border-top:1px solid var(--line);font-size:14px}.check{width:18px;height:18px;border:1.5px solid var(--leaf);border-radius:50%;flex:0 0 auto}.tag{margin-left:auto;padding:3px 8px;border-radius:99px;background:#eef4eb;color:var(--leaf);font-size:11px;white-space:nowrap}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:94px;padding-top:28px;border-top:1px solid var(--line)}.summary h2{margin:0 0 8px;font-size:15px}.summary p{margin:0;color:var(--muted);font-size:14px}footer{padding:22px 0 40px;color:var(--muted);font-size:12px}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:48px}.scene{min-height:390px}.summary{grid-template-columns:1fr;gap:24px;margin-top:64px}}@media(max-width:520px){.wrap{padding:0 20px}header{height:68px}nav{gap:12px;font-size:12px}main{padding-top:48px}.hero h1{font-size:42px}.scene{padding:20px;min-height:350px}.notebook{top:72px;left:20px;right:20px;padding:22px 18px}.task{font-size:12px}.tag{font-size:10px}}
+</style>
+</head>
+<body>
+<header class="wrap"><a class="brand" href="#top"><span class="mark">S</span><span>Small Day Project</span></a><nav><a href="#about">소개</a><a href="#routine">루틴</a><a href="#start">시작하기</a></nav></header>
+<main id="top" class="wrap">
+<section class="hero" id="start"><div><p class="eyebrow">작게 시작하는 하루 기획</p><h1>오늘 하나만 끝내도 충분한 프로젝트</h1><p class="lead">해야 할 일을 크게 만들지 않고, 지금 시작할 수 있는 가장 작은 단위로 바꿔보세요.</p><div class="actions"><a class="button primary" href="#routine">오늘 계획 보기</a><a class="button secondary" href="#about">프로젝트 요약</a></div></div>
+<div class="scene" aria-label="오늘의 작은 프로젝트 미리보기"><div class="sun"></div><div class="notebook"><h2 class="note-title">오늘의 작은 프로젝트</h2><div class="task"><span class="check"></span><span>하루 목표 하나 고르기</span><span class="tag">5분</span></div><div class="task"><span class="check"></span><span>작업을 가장 작은 단위로 나누기</span><span class="tag">15분</span></div><div class="task"><span class="check"></span><span>끝낸 결과를 짧게 기록하기</span><span class="tag">10분</span></div></div><div class="desk"></div></div></section>
+<section class="summary" id="about"><div><h2>프로젝트 요약</h2><p>하루 단위의 작고 명확한 프로젝트를 제안하고, 사용자가 바로 실행할 수 있게 돕는 간결한 서비스형 홈 화면입니다.</p></div><div><h2>디자인 콘셉트</h2><p>차분한 종이 질감, 낮은 채도의 자연색, 노트형 시각 요소로 부담 없이 시작하는 분위기를 만듭니다.</p></div><div id="routine"><h2>메인 구성</h2><p>브랜드 내비게이션, 핵심 메시지, 행동 버튼, 오늘의 진행표 미리보기, 하단 요약 정보로 구성했습니다.</p></div></section>
+</main><footer class="wrap">Small steps, real progress.</footer>
+</body>
+</html>
